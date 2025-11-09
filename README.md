@@ -1,131 +1,147 @@
-# mmoore_online_store
-A simple PHP-based online store with shopping cart and checkout functionality.
-mmoore_online_store – PHP Online Store Project
 
-Author: Morgan Moore
-Course: SDC310 – PHP Web Application Development
-Term: Fall 2025
-📌 Project Overview
+Project Summary – mmoore_online_store
+Overview
 
-This project is a simplified online store built using PHP, MySQL, and XAMPP, following the course requirements for SDC310. The application allows users to browse products, add items to a shopping cart, and complete a checkout process with calculated totals (tax and shipping).
+mmoore_online_store is a PHP-based online store application developed using the MVC (Model-View-Controller) architecture. It demonstrates full-stack web development concepts including database connectivity, dynamic content generation, and session-based cart management. The project was built and tested in XAMPP using PHP 8.2 and MySQL, with a structured folder layout for maintainability.
 
-Throughout the project, the application was expanded week-by-week using structured planning, database integration, and finally the MVC (Model–View–Controller) architecture for cleaner organization and maintainability.
-Features
-Catalog
+Key Features
 
-Dynamically displays products from a MySQL database
+Dynamic Product Catalog — Products are loaded directly from the MySQL database.
 
-Shows product name, description, cost, and “Add to Cart” button
+Shopping Cart — Supports adding, updating, and removing items using PHP sessions.
 
-Shopping Cart
+Checkout Page — Calculates subtotal, tax, and shipping automatically.
 
-Add items to cart
+MVC Architecture — Separation of concerns through models, views, and controllers.
 
-Update quantity of existing items
+Responsive Interface — Clean and simple design with organized navigation between catalog, cart, and checkout pages.
 
-Remove items
+Database Integration — CRUD operations implemented for full backend functionality.
 
-Automatic subtotal calculation
+Technologies Used
 
-Checkout
+Frontend: HTML5, CSS3, PHP (Views)
 
-Displays purchase summary
+Backend: PHP (Controllers & Models)
 
-Calculates:
+Database: MySQL (phpMyAdmin)
 
-5% tax
+Server Environment: Apache (XAMPP)
 
-10% shipping
+Version Control: GitHub (Repository: AbsurdGem/mmoore_online_store
+)
 
-Final total
-
-Clears the cart after checkout
-
-Architecture
-
-Fully implemented MVC structure
-
-Controllers handle logic
-
-Models handle database interaction
-
-Views handle page layout and output
-
-🗃 Database
-
-Database name: mmoore_online_store
-
-Table: products
-
-Includes 5 sample items such as:
-
-Gaming Mouse
-
-Mechanical Keyboard
-
-HD Monitor
-
-USB-C Hub
-
-External SSD
-
-A complete SQL export of the database is included in the repository as:
-✅ mmoore_online_store.sql
-
-🛠 Technologies Used
-
-PHP 8
-
-MySQL / phpMyAdmin
-
-XAMPP
-
-VS Code
-
-Git / GitHub
 Testing Summary
 
-A full testing document is included separately.
-Tests performed included:
+All application features were manually tested in the XAMPP environment. The following key areas were validated:
 
-Database connection
+Database connection and CRUD operations ✅
 
-CRUD operations
+Product catalog display and navigation ✅
 
-Add/Update/Remove cart items
+Add-to-cart and cart persistence ✅
 
-Checkout totals
+Checkout calculations and clear cart function ✅
 
-Cart clearing
+Error-free operation and consistent interface styling ✅
 
-Path and session error checks
+Testing confirmed that the application functions as expected, with no PHP or database errors.
 
-All core features tested successfully in the XAMPP environment.
+Lessons Learned
 
-🏁 Final Notes
+This project strengthened my understanding of PHP, MySQL, and MVC structure. I learned how important consistent file organization, debugging, and testing are in maintaining a clean workflow. Overcoming issues with WAMP and switching to XAMPP taught me real-world troubleshooting skills. The process also showed how structured planning and small milestones make large projects much more manageable.
 
-This project demonstrates full-cycle web development:
+Phase Tags
 
-Planning
+Phase 2: Database & Framework Setup
 
-Building a database
+Phase 3: Database Integration & CRUD Operations
 
-Implementing PHP functionality
+Phase 4: MVC Architecture Implementation
 
-Moving to MVC
+Author
 
-Testing & final deployment
+Morgan Moore
+ECPI University – Software Development Major
+Project: mmoore_online_store
+Course: SDC310 – PHP Web Application Development
+Date: November 2025
 
-It also represents one of the largest PHP projects I’ve built so far, and it helped me understand both backend logic and organizing larger applications.
 
-📎 Releases
+How to Run This Project
 
-Phase 2: Initial database and structure
+Follow these steps to set up and run the mmoore_online_store PHP web application on your local environment:
 
-Phase 3: Database integration and CRUD
+Install XAMPP
 
-Phase 4: Final MVC version + testing
+Download and install XAMPP
+ for Windows.
 
-HTML & CSS
+Make sure Apache and MySQL services are running in the XAMPP Control Panel.
 
-MVC file structure
+Clone or Download the Repository
+
+Open your terminal or Git Bash.
+
+Navigate to your htdocs directory (usually C:\xampp\htdocs\).
+
+Clone the project repository:
+
+git clone https://github.com/AbsurdGem/mmoore_online_store.git
+
+
+Or download and extract the ZIP file directly from GitHub.
+
+Set Up the Database
+
+Open phpMyAdmin from XAMPP (http://localhost/phpmyadmin).
+
+Create a new database named:
+
+mmoore_online_store
+
+
+Click the Import tab.
+
+Import the SQL file included in the project folder:
+
+mmoore_online_store.sql
+
+
+Configure Database Connection
+
+Open the file:
+
+includes/db_connect.php
+
+
+Make sure your connection details match your local environment:
+
+$hostname = "localhost";
+$username = "root";
+$password = "";
+$dbname   = "mmoore_online_store";
+
+
+Run the Application
+
+In your browser, go to:
+
+http://localhost/mmoore_online_store/
+
+
+The homepage should load, displaying your product catalog.
+
+Test the Features
+
+Add products to the cart.
+
+View and update your cart.
+
+Proceed to checkout to confirm totals and clear the cart.
+
+View MVC Structure (Optional)
+
+Review the models/, views/, and controllers/ folders for organized source code.
+
+Each controller coordinates data from models and sends it to the views.
